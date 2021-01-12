@@ -11,7 +11,6 @@ pip install netpalm-client
 ```
 
 ## Basic Usage
-
 ```python
 from netpalm_client import NetpalmClient
 
