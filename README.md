@@ -4,7 +4,14 @@ Simple client library for working with [Netpalm](https://github.com/tbotnz/netpa
 
 Detailed example available in [examples](https://github.com/wrgeorge1983/netpalm-client/example) folder of this repo
 
-Basic usage:
+
+## Install
+```
+pip install netpalm-client
+```
+
+## Basic Usage
+
 ```python
 from netpalm_client import NetpalmClient
 
