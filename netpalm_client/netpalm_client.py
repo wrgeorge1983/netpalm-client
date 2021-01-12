@@ -136,7 +136,7 @@ class APIClientBase:
         return f'{self.__class__.__name__}(url={self.url})'
 
 
-class NetpalmClient(APIClientBase):
+class NetpalmClient(APIClientBase): 
     def __init__(self, url: str, key: str, cli_user: str = None, cli_pass: str = None,
                  cache: bool = True, cache_ttl: int = 300):
         self.url = url
@@ -185,13 +185,14 @@ class NetpalmClient(APIClientBase):
 
         return result
 
-    def poll_tasks(self, task_ids: List[str], interval: int = 1, label='') -> Dict:
+    def poll_tasks(self, task_ids: List[str], interval: int = 1) -> Dict:
         """
-        :param label:
         :param task_ids:
         :param interval:
         :return:  {
-            task_id: result
+            task_id: result,
+            ...
+            task_id_n: result_n
         }
         """
         results = {}
@@ -220,7 +221,7 @@ class NetpalmClient(APIClientBase):
             if not unfinished_task_ids:
                 break
 
-            log.info(f'{label} {len(unfinished_task_ids)} unfinished tasks out of {len(task_ids)}')
+            log.info(f'{len(unfinished_task_ids)} unfinished tasks out of {len(task_ids)}')
             time.sleep(interval)
 
         return results
