@@ -2,7 +2,7 @@
 
 Simple client library for working with [Netpalm](https://github.com/tbotnz/netpalm)
 
-Detailed example available in [examples](https://github.com/wrgeorge1983/netpalm-client/example) folder of this repo
+Detailed example available in [examples](https://github.com/wrgeorge1983/netpalm-client/tree/master/example) folder of this repo
 
 
 ## Install

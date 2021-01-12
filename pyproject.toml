@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "netpalm-client"
-version = "1.0.0"
+version = "1.0.1"
 description = "Simple Client for accessing a Netpalm Service"
 authors = ["Will George <wrgeorge1983@gmail.com>"]
 license = "MIT"
