@@ -32,3 +32,8 @@ actual_result = netpalm_result['task_result'][command]  # failures will have a '
 
 print(f'{actual_result=}')
 ```
+
+# Changelog
+1.0.0 - 1.0.3: Initial submissions
+
+1.0.4: Fix #3: Don't use Walrus operator in code targeting python version 3.7.

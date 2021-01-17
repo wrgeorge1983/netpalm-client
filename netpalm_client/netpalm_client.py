@@ -162,7 +162,8 @@ class NetpalmClient(APIClientBase):
         """Check the status of a task, raise NetpalmStatusFail for invalid status'."""
         endpoint = f'task/{task_id}'
         rslt = self.get(endpoint, raise_for_status=True)
-        if (task_status := rslt.get('task_status')) not in redis_status:
+        task_status = rslt.get('task_status')
+        if task_status not in redis_status:
             raise NetpalmStatusFail(f'Task Status {task_status} from {endpoint} is not valid!')
 
         return rslt
